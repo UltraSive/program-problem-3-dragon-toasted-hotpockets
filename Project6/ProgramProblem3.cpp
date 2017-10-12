@@ -1,11 +1,12 @@
 /*
 TEAM DRAGON TOASTED HOTPOCKETS
 Jacob Hemphill, Aidan Nico, Youssef Khalifa - 10/5/17 2nd
-
-Assignment Name : Three digit ascend descend selection 
-
+Assignment Name : Three digit ascend descend selection
 To be able to have a 3 digit number into the "system" and calculate A, B, and C
 Special thanks to Toaster = Bathbomb for help in coding the statements and for help in general.
+-
+Edited By Aidan Perry
+Now repeats 30 times and looks better with new variable names.
 */
 
 // Libraries
@@ -35,24 +36,30 @@ void pause() {
 
 void main() {
 	// Variables
+	int i = 0;
+	for (; i<= 30; i++)
+	{
+		/*Repeat for thirty times with the 'for' loop and what i believe to be short hand.*/
 	int three_digit_number;
+
+
+	cout << "enter a three digit number" << endl;
+	cin >> three_digit_number;
 	
-		cout << "enter a three digit number" << endl;
-		cin >> three_digit_number;
-		
-		int x = three_digit_number; 
-		int c = x % 10;
-		int b = (x / 10) % 10;
-		int a = x / 100;
-		if (a < b && b < c) {
+
+	int x = three_digit_number;
+	int Third_number = x % 10;
+	int Second_number = (x / 10) % 10;
+	int First_number = x / 100;
+		if (First_number < Second_number && Second_number < Third_number) {
 			cout << "Ascending . . . " << endl;
-			}
-		else if (a > b && b > c) {
+		}
+		else if (First_number > Second_number && Second_number > Third_number) {
 			cout << "Descending . . .  " << endl;
-			}
+		}
 		else {
 			cout << "Neither . . . " << endl;
 		}
-
-		pause(); // pauses to see the displayed text
+	}
+	pause(); // pauses to see the displayed text
 }
